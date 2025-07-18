@@ -1,0 +1,7 @@
+{
+  "subscription_id": "b82582c1-3f5b-48fe-abcb-251a0faa2ec4",
+  "output_format": "csv",
+  "report_path": "./reports/",
+  "nsg_critical_ports": [22, 3389, 5985, 5986]
+}
+
