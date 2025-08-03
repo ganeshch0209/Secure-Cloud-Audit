@@ -1,4 +1,12 @@
 # modules/storage_audit.py
+
+"""
+Scans all Azure Storage Accounts in a subscription for:
+1. Missing HTTPS enforcement
+2. Public blob access enabled
+3. Encryption not enabled for blob service
+"""
+
 from azure.mgmt.storage import StorageManagementClient
 from azure.identity import AzureCliCredential
 
@@ -14,29 +22,33 @@ def audit_storage_accounts(subscription_id):
 
         properties = client.storage_accounts.get_properties(rg_name, name)
 
-        # Check for HTTPS
-        if not properties.enable_https_traffic_only:
+        # HTTPS enforcement check
+        if not getattr(properties, "enable_https_traffic_only", True):
             report.append({
-                "resource": name,
-                "issue": "HTTPS not enforced",
-                "severity": "High"
+                "Resource Type": "Storage",
+                "Name": name,
+                "Issue Found": "HTTPS not enforced",
+                "Severity": "High"
             })
 
-        # Check for public access
+        # Public access check
         blob_props = client.blob_services.get_service_properties(rg_name, name, 'default')
-        if blob_props and blob_props.is_public_access_allowed:
+        if getattr(blob_props, "is_public_access_allowed", False):
             report.append({
-                "resource": name,
-                "issue": "Blob storage public access enabled",
-                "severity": "Medium"
+                "Resource Type": "Storage",
+                "Name": name,
+                "Issue Found": "Blob storage public access enabled",
+                "Severity": "Medium"
             })
 
-        # Encryption check
-        if not properties.encryption.services.blob.enabled:
+        # Blob encryption check
+        blob_encryption = getattr(properties.encryption.services, "blob", None)
+        if blob_encryption and not getattr(blob_encryption, "enabled", True):
             report.append({
-                "resource": name,
-                "issue": "Blob encryption disabled",
-                "severity": "High"
+                "Resource Type": "Storage",
+                "Name": name,
+                "Issue Found": "Blob encryption disabled",
+                "Severity": "High"
             })
 
     return report
