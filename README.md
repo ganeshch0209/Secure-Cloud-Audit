@@ -64,7 +64,7 @@ SecureCloudAudit/
 
 ### 1. Clone the repository
 ```bash
-git clone https://github.com/yourusername/SecureCloudAudit.git
+git clone https://github.com/ganeshch0209/Secure-Cloud-Audit.git
 cd SecureCloudAudit
 ```
 
@@ -120,3 +120,5 @@ az login
 ## 🛡️ License
 
 MIT License. Use and contribute freely.
+![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
+![Python Version](https://img.shields.io/badge/Python-3.x-blue.svg)
