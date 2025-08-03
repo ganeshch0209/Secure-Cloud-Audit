@@ -8,21 +8,18 @@ azure-mgmt-keyvault
 azure-graphrbac
 azure-mgmt-monitor
 
-# CLI & subprocess (optional for CLI integration)
+# CLI & config
 pyyaml
-subprocess.run ; python_version >= "3.5"
+python-dotenv
 
 # CSV & Reporting
 pandas
 
-# Optional: For dashboards (if using Streamlit)
+# Optional: For dashboards
 streamlit
 
 # Optional: For email alerts
 sendgrid
 
-# Optional: For working with config files
-python-dotenv
-
-# For clean async or logging (optional but recommended)
+# Optional: For structured logging
 loguru
