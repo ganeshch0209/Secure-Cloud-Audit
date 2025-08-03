@@ -12,12 +12,20 @@ def audit_key_vaults(subscription_id):
         name = kv.name
         rg_name = kv.id.split("/")[4]
 
-        # No actual access to secrets unless using KeyVault Data SDK (outside scope)
-        # Simulated check
+        # Simulated check – No audit logging
         report.append({
-            "resource": name,
-            "issue": "No audit logging configured",
-            "severity": "Medium"
+            "Resource Type": "Key Vault",
+            "Name": name,
+            "Issue Found": "No audit logging configured",
+            "Severity": "Medium"
+        })
+
+        # Future enhancement placeholder – expiring secrets
+        report.append({
+            "Resource Type": "Key Vault",
+            "Name": name,
+            "Issue Found": "Secret expiration checks not implemented",
+            "Severity": "Low"
         })
 
     return report
