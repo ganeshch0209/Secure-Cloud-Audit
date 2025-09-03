@@ -1,10 +1,10 @@
-# 🔐 SecureCloudAudit – Azure Security Misconfiguration Scanner
+#  SecureCloudAudit – Azure Security Misconfiguration Scanner
 
 **SecureCloudAudit** is a Python-based auditing tool designed to scan an Azure subscription for common security misconfigurations. It's inspired by Microsoft Defender for Cloud, but built from scratch to demonstrate practical cloud security skills, automation, and compliance monitoring.
 
 ---
 
-## 🎯 Features
+##  Features
 
 ✅ Scans Azure resources for common misconfigurations  
 ✅ Generates detailed CSV compliance reports  
@@ -15,7 +15,7 @@
 
 ---
 
-## 🔍 Current Audit Checks (MVP)
+##  Current Audit Checks (MVP)
 
 | Category | Check | Severity |
 |----------|-------|----------|
@@ -27,7 +27,7 @@
 
 ---
 
-## 🧠 Tech Stack
+##  Tech Stack
 
 | Layer | Tool |
 |-------|------|
@@ -60,7 +60,7 @@ SecureCloudAudit/
 
 ---
 
-## 🚀 Getting Started
+##  Getting Started
 
 ### 1. Clone the repository
 ```bash
@@ -93,7 +93,7 @@ az login
 
 ---
 
-## 🧩 Future Enhancements
+##  Future Enhancements
 
 - ✅ Power BI / Streamlit dashboards  
 - ✅ Email alerts via SendGrid  
@@ -102,7 +102,7 @@ az login
 
 ---
 
-## 📚 Resources
+##  Resources
 
 - [Azure SDK for Python](https://learn.microsoft.com/en-us/azure/developer/python/azure-sdk-overview)  
 - [Azure CLI Reference](https://learn.microsoft.com/en-us/cli/azure/)  
@@ -117,7 +117,7 @@ az login
 
 ---
 
-## 🛡️ License
+##  License
 
 MIT License. Use and contribute freely.
 ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
