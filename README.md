@@ -82,7 +82,7 @@ az login
 
 ---
 
-## 📤 Sample Report Output (CSV)
+##  Sample Report Output (CSV)
 
 | Resource Type | Name          | Issue Found                 | Severity |
 |---------------|---------------|-----------------------------|----------|
@@ -113,7 +113,7 @@ az login
 
 ## 📌 About the Author
 
-👨‍💻 This project was created as part of my portfolio while preparing for Azure SC-200 and AZ-500. It aligns with the certifications and demonstrates real-world cloud security auditing.
+ This project was created as part of my portfolio while preparing for Azure SC-200 and AZ-500. It aligns with the certifications and demonstrates real-world cloud security auditing.
 
 ---
 
